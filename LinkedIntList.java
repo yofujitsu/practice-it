@@ -75,6 +75,12 @@ public class LinkedIntList<T> {
         first.next = null;
     }
 
+    public void insertAtBeginning(int newData) {
+        ListNode newNode = new ListNode(newData);
+        newNode.next = front;
+        front = newNode;
+    }
+
     public void push(int new_data)
     {
         ListNode new_node = new ListNode(new_data);
@@ -133,6 +139,8 @@ public class LinkedIntList<T> {
         System.out.println("List 1 after removeAll");
         l2.printList();
         list.firstLast();
+        list.printList();
+        list.insertAtBeginning(15);
         list.printList();
     }
 }
